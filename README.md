@@ -1,6 +1,10 @@
 # Not A bot
 this a multi perpess bot 
 
+## how to use the bot 
+1. ``npm i``
+2. ``node .``` or ``node server.js``
+
 next update 
 1. shop for economy
 2. buy for economy
