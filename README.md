@@ -7,7 +7,6 @@
 2.  make the exapile.config.json to config.json 
 3. edit the config.json
 4. ``node .``\` or ``node server.js``
-<hr>
 
 |      Command      |  
 |-------------------|
@@ -18,7 +17,6 @@
 | economy Commands  |         
 | Genaral Commands  |                       
 
-<hr>
 next update 
 1. shop for economy
 2. buy for economy
