@@ -4,15 +4,10 @@
 
 ## how to use the bot 
 1. ``npm i``
-2. ``node .``\` or ``node server.js``
-
-next update 
-1. shop for economy
-2. buy for economy
-3. fixing up the dashboard 
-4. adding more commands 
+2.  make the exapile.config.json to config.json 
+3. edit the config.json
+4. ``node .``\` or ``node server.js``
 <hr>
-                                                    
 |      Command      |  
 |-------------------|
 |  Fun Commands     |
@@ -21,3 +16,10 @@ next update
 |  info Commands    |
 | economy Commands  |         
 | Genaral Commands  |                       
+<hr>
+next update 
+1. shop for economy
+2. buy for economy
+3. fixing up the dashboard 
+4. adding more commands 
+                                                   
