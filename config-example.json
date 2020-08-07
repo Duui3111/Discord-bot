@@ -1,0 +1,10 @@
+{
+  "token": "BOT TOKEN",
+  "youtube_api": "YOUTUBR API KEY",
+  "prefix": "$",
+ 
+  "activity": {
+    "status": "$help",
+    "type": "STREAMING"
+  }
+}
