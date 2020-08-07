@@ -8,6 +8,7 @@
 3. edit the config.json
 4. ``node .``\` or ``node server.js``
 <hr>
+
 |      Command      |  
 |-------------------|
 |  Fun Commands     |
@@ -16,6 +17,7 @@
 |  info Commands    |
 | economy Commands  |         
 | Genaral Commands  |                       
+
 <hr>
 next update 
 1. shop for economy
