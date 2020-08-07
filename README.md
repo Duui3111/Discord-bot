@@ -1,6 +1,5 @@
-# Not A bot
+## Not A bot
 ## Get this bot on your server [Click Here](https://discord.com/oauth2/authorize?client_id=735698663027900470&scope=bot&permissions=8)
-this a multi perpess bot 
 
 
 ## how to use the bot 
