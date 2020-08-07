@@ -11,7 +11,7 @@ next update
 2. buy for economy
 3. fixing up the dashboard 
 4. adding more commands 
-
+<hr>
                                                     
 |      Command      |  
 |-------------------|
