@@ -6,7 +6,7 @@
 1. ``npm i``
 2.  make the exapile.config.json to config.json 
 3. edit the config.json
-4. ``node .``\` or ``node server.js``
+4. ``node .```\ or ``node server.js``
 
 |      Command      |  
 |-------------------|
