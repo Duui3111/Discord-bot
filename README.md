@@ -14,6 +14,7 @@
 |  Music Commands   |          
 |  roles Commands   |          
 |  info Commands    |
+|  rank commands    |
 | economy Commands  |         
 | Genaral Commands  |                       
 
