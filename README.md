@@ -1,4 +1,4 @@
- [![Discord Gophers](https://discordapp.com/api/guilds/740070599375847556/embed.png)](https://discord.gg/0f1SbxBZjYoCtNPP)
+ [![Discord Server](https://discordapp.com/api/guilds/740070599375847556/embed.png)](https://discord.gg/0f1SbxBZjYoCtNPP)
 
 ## Not A bot
 ## Get this bot on your server [Click Here](https://discord.com/oauth2/authorize?client_id=735698663027900470&scope=bot&permissions=8)
