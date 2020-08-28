@@ -4,6 +4,7 @@
 
 ## Not A bot
 ## Get this bot on your server [Click Here](https://discord.com/oauth2/authorize?client_id=735698663027900470&scope=bot&permissions=8)
+![textline2](https://user-images.githubusercontent.com/67356442/91506073-38e1fd00-e89f-11ea-90f2-c4ffcc17e992.PNG)
 
 
 ## how to use the bot 
