@@ -10,12 +10,6 @@
 This bot is only to be deployed if
 Has permissions to do so for more info content me on discord `Duui#9247` 
 
-## how to use the bot 
-1. ``npm i``
-2.  make the ``config-example.json`` to ``config.json`` 
-3. edit the ``config.json``
-4. ``node .`` or ``node server.js``
-
 |      Command      |  
 |-------------------|
 |  Fun Commands     |
