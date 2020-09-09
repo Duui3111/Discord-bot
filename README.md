@@ -8,7 +8,7 @@
 
 # warning ⚠️ 
 This bot is only only to be deployed of 
-Has dmed me on discord `Duui#9247` 
+Has  permissions to for money re info content me on discord `Duui#9247` 
 
 ## how to use the bot 
 1. ``npm i``
