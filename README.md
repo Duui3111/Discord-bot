@@ -6,6 +6,9 @@
 ## Get this bot on your server [Click Here](https://discord.com/oauth2/authorize?client_id=735698663027900470&scope=bot&permissions=8)
 ![textline2](https://b4bf6f7c4298.ngrok.io/api/embed/735698663027900470)
 
+# warning ⚠️ 
+This bot is only only to be deployed of 
+Has dmed me on discord `Duui#9247` 
 
 ## how to use the bot 
 1. ``npm i``
