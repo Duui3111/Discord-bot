@@ -7,8 +7,8 @@
 ![textline2](https://b4bf6f7c4298.ngrok.io/api/embed/735698663027900470)
 
 # warning ⚠️ 
-This bot is only only to be deployed of 
-Has  permissions to for money re info content me on discord `Duui#9247` 
+This bot is only only to be deployed if
+Has permissions to do so for more info content me on discord `Duui#9247` 
 
 ## how to use the bot 
 1. ``npm i``
