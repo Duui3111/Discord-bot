@@ -9,21 +9,3 @@
 # warning ⚠️ 
 This bot is only to be deployed if
 Has permissions to do so for more info content me on discord `Duui#9247` 
-
-|      Command      |  
-|-------------------|
-|  Fun Commands     |
-|  Music Commands   |          
-|  roles Commands   |          
-|  info Commands    |
-|  mod Commands     | 
-|  rank commands    |
-| economy Commands  |         
-| Genaral Commands  |                       
-
-next update 
-1. shop for economy
-2. buy for economy
-3. fixing up the dashboard 
-4. adding more commands 
-                                                   
