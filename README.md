@@ -4,7 +4,6 @@
 
 ## Not A bot
 ## Get this bot on your server [Click Here](https://discord.com/oauth2/authorize?client_id=735698663027900470&scope=bot&permissions=8)
-![textline2](https://b4bf6f7c4298.ngrok.io/api/embed/735698663027900470)
 
 # warning ⚠️ 
 This bot is only to be deployed if
