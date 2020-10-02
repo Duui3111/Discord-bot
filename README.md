@@ -6,4 +6,4 @@
 ## Get this bot on your server [Click Here](https://discord.com/oauth2/authorize?client_id=735698663027900470&scope=bot&permissions=8)
 
 # warning ⚠️ 
-This bot is not to be deployed more info content me on discord `Duui#9247` 
+This bot is not to be deployed if this bot has been deployed there will be Consequences
