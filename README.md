@@ -10,14 +10,4 @@ next update
 
 # Get this bot on your server [Click Here](https://discord.com/oauth2/authorize?client_id=735698663027900470&scope=bot&permissions=8)
 
-                                                    
-.-------------------.
-|      Command      |  
-|-------------------|
-|  Fun Commands     |
-|  Music Commands   |          
-|  roles Commands   |          
-|  info Commands    |
-| economy Commands  |         
-| Genaral Commands  |
-'------------------'                        
+ ## warning                                                                        
