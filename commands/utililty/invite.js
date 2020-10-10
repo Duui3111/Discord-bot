@@ -2,6 +2,9 @@
 module.exports = {
   name: "invite",
   category: "utililty",
+  aliases: ["invite"],
+  description:"Get invite for a the bot",
+  usage: "invite",
 run: async (client, message, args) => {
     const embed = {
       "color": 11650,
@@ -11,7 +14,7 @@ run: async (client, message, args) => {
       "fields": [
         {
           "name": "‎‎ ‎‎‎",
-          "value": "[**invite the bot in your server**](https://discord.com/oauth2/authorize?client_id=735698663027900470&scope=bot&permissions=8)" 
+          "value": "[** invite the bot in your server**](https://discord.com/oauth2/authorize?client_id=735698663027900470&scope=bot&permissions=8)" 
         },
       ]
     };

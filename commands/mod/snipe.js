@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports ={
     name: "snipe",
-    category: "mod",
+    category: "moderation",
     aliases: ["snipe"],
     description: "Shows the most recent deleted message.",
     usage: "snipe",

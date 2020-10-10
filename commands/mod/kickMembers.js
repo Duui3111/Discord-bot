@@ -1,6 +1,9 @@
 module.exports = {
   name: "kick",
-  category: "mod",
+  category: "moderation",
+  aliases: ["kick"],
+  description:"kicks a user in your server",
+  usage: "kick <user> <reason>",
 run: async (client, message, args) => {
     if (!message.guild) return;
     //if (message.content.startsWith('!kick')) {

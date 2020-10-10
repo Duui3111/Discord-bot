@@ -5,6 +5,9 @@ const db = require('quick.db');
 module.exports = {
   name: "poll",
   category: "utililty",
+  aliases: ["poll"],
+  description:"make a poll in your server",
+  usage: "sayEmbed",
   run: async (client, message, args) => {
     if (!message.member.permissions.has("ADMINISTRATOR"))
     return message.channel.send(`You do not have admin, ${message.author.username}`);

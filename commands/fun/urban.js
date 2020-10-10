@@ -5,6 +5,7 @@ module.exports = {
     name: "urban",
     category: "fun",
 run: async (client, message, args) => {
+    if(!message.channel.nsfw) return message. channel.send('cant use thant command here most be in a nsfw channel'); 
     if(args.length < 1) return message.reply("Please enter something!");
     let XD = args.join(" "); 
 
@@ -21,7 +22,5 @@ run: async (client, message, args) => {
 
         message.channel.send(urbEmbed)
     });
-
-
-}
+  }
 }

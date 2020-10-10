@@ -1,7 +1,7 @@
 {
   "token": "BOT TOKEN",
   "youtube_api": "YOUTUBR API KEY",
-  "dprefix": "$",
+  "prefix": "$",
  
   "activity": {
     "status": "$help",

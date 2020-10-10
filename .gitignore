@@ -6,7 +6,6 @@ config.json
 
 #github stuff
 .git/
-.github
 
 #db stuff
 database.sqlite
@@ -17,8 +16,5 @@ json.sqlite
 
 #testing 
 test/
-dir.test
-*.test
-*test
 Not-A-bot/
-comdele.js
+save db/

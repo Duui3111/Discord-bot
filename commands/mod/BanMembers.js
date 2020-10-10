@@ -1,6 +1,9 @@
 module.exports = {
     name: "ban",
-    category: "mod",
+    category: "moderation",
+    aliases: ["ban"],
+    description:"ban a user in your server",
+    usage: "ban <user> <reason>",
     run: async (client, message, args) => {
       if (!message.guild) return;
 

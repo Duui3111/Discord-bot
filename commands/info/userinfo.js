@@ -9,24 +9,17 @@ module.exports = {
     usage: "userinfo | userinfo <user>",
     run: async (client, message, args, data) =>{
         let user = message.mentions.users.first() || message.author;
-        //Get the users info
-    //   let user = message.author;
       let userID = user.id;
       let userName = user.tag;
       let joinedDate = user.createdAt;
       let userStatus = user.presence.status;
-
-      //If the user is in the guild get their guild info
       let member = null;
       if(message.guild){
           member = await message.guild.members.fetch(user).catch((err) => {});
       }
-
       let memberColor = member.displayHexColor;
       let memberHRole = member.roles.highest;
       let memberJoined = member.joinedAt;
-
-      //Create the embed and add information to it
       let announcementEmbed = new Discord.MessageEmbed()
       .setAuthor(user.username, user.displayAvatarURL())
       .setThumbnail(user.displayAvatarURL())
@@ -39,8 +32,6 @@ module.exports = {
         { name: 'Highest role', value: member.roles.highest, inline: true },
         { name: 'Total roles', value: member.roles.cache.size, inline: true },
       )
-
-      //Add the users status
        if(userStatus === "dnd"){
          announcementEmbed.addFields({ name: 'Status', value: ":red_circle: Do not disturb", inline: true })
        }else if(userStatus === "idle"){
@@ -54,7 +45,5 @@ module.exports = {
        }
 
       return message.channel.send(announcementEmbed)
-
-
     },
 };

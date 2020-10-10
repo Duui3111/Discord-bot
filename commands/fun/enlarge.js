@@ -3,7 +3,10 @@ const { parse } = require("twemoji-parser");
 
 module.exports = {
     name: "enlarge",
-  category: "utililty",
+  category: "fun",
+  aliases: ["enlarge"],
+  description:"enlarge a emoji",
+  usage: "enlarge <emoji>",
 run: async (client, message, args) => {
     
     const emoji = args[0];

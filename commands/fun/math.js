@@ -7,11 +7,8 @@ module.exports = {
     aliases: ["math"],
     category: "fun",
     run: async (client, message, args) => {
-
         if(!args[0]) return message.channel.send('Please provide a question');
-
         let resp;
-
         try {
             resp = math.evaluate(args.join(" "))
         } catch (e) {

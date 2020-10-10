@@ -11,18 +11,10 @@ module.exports = {
     if(prefix === null) prefix = dprefix;
 
     let question = message.content.slice(prefix.length + 6);
-    if (!question)
-      return message.channel.send(`You did not specify your question!`);
+    if (!question) return message.channel.send(`You did not specify your question!`);
     else {
-      let responses = [
-        "Yes",
-        "No",
-        "Definetly",
-        "Absoloutely",
-        "Not in a million years",
-      ];
-      let response =
-        responses[Math.floor(Math.random() * responses.length - 1)];
+      let responses = [ "Yes", "No", "Definetly", "Absoloutely", "Not in a million years", ];
+      let response = responses[Math.floor(Math.random() * responses.length)];
       let Embed = new MessageEmbed()
         .setAuthor(message.author.tag, message.author.displayAvatarURL())
         .setTitle(`8Ball!`)

@@ -1,6 +1,9 @@
 module.exports = {
   name: "unmute",
-  category: "mod",
+  category: "moderation",
+  usage: "unmute <user>",
+  aliases: ["unmute"],
+  description:"unmute a user in your server",
 run: async (client, message, args) => {
     if (!message.member.hasPermission("MANAGE_ROLES")) {
         return message.channel.send(

@@ -1,8 +1,9 @@
 module.exports = {
         name: "purge",
-        usage: "!purge <amount of messages>",
-        category: "mod",
-
+        usage: "purge <amount of messages>",
+        category: "moderation",
+        aliases: ["purge"],
+        description:"delet a amout of message",
     run: async (client, message, args) => {
         if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You should have admin perms to use this command!")
  

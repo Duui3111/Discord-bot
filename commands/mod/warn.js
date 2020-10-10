@@ -3,8 +3,10 @@ const db = require("quick.db")
 
 module.exports = {
   name: "warn",
-  category: "mod",
-
+  category: "moderation",
+  usage: "warn <user> <reason>",
+  aliases: ["warn"],
+  description:"warn a user then dms the reason",
   run: async (client, message, args) => {   
     if(!message.member.hasPermission("ADMINISTRATOR")) {
       return message.channel.send("You should have admin perms to use this command!")

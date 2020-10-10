@@ -1,4 +1,4 @@
-const { MessageEmbed, Guild } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const { dprefix } = require("../../config.json");
 const db = require('quick.db');
 
@@ -56,12 +56,12 @@ module.exports = {
         let category = key;
 
         let desc = "`"+ prefix + value.join("`, `" + prefix) + "`"; 
-
+  
         emx.addField(`${category.toUpperCase()}[${value.length}]`, desc)
         emx.setTimestamp();
       }
 
-     return message.channel.send(emx);
+     return message.channel.send(emx);    
     }
   }
 }

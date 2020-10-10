@@ -8,7 +8,7 @@ module.exports = {
   usage: "serverinfo",
   run: async (bot, message, args) => {  
 	const { guild } = message   
-    const { name, region, memberCount, owner, afkTimeout } = guild
+    const { name, region, memberCount, owner } = guild
     const icon = guild.iconURL()
     const embed = new Discord.MessageEmbed() 
       .setTitle(`Server info for ${name}`)
@@ -30,7 +30,7 @@ module.exports = {
           name: 'Owner',
           value: owner.user.tag,
         },
-		{
+		    {
           name: 'Verification Level',
           value: `${message.guild.verificationLevel}`,
         },

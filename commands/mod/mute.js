@@ -1,6 +1,9 @@
 module.exports = {
   name: "mute",
-  category: "mod",
+  category: "moderation",
+  aliases: ["mute"],
+  description:"mutes a user in your server",
+  usage: "mute <user> <reason>",
 run: async  (client, message, args, roles, guild ) => { 
 if (!message.member.hasPermission("MANAGE_ROLES")) {
     return message.channel.send(
@@ -32,7 +35,7 @@ if (!message.member.hasPermission("MANAGE_ROLES")) {
     
     
   if(!muterole) {
-  return message.channel.send("This server do not have role with name `Muted`")
+  return message.channel.send("This server do not have role with name `Muted` with permission of not to sned messages")
 }
 if(user.roles.cache.has(muterole)) {
     return message.channel.send("Given User is already muted")

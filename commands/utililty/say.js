@@ -1,10 +1,10 @@
 module.exports = {
    name: "say",
     category: "utililty",
-run: async (client, message, args) => {
-    const sayMessage = args.join(" ");
-    message.delete().catch(O_o=>{}); 
-    message.channel.send(sayMessage);
-
-}
+    aliases: ["say"],
+    description:"say",
+    usage: "say",  
+   run: async (client, message, args) => {
+        message.channel.send(args.join(" "));
+    }
 } 
