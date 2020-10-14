@@ -14,3 +14,8 @@ module.exports = {
      }
  } 
  
+
+//  .setTitle(cmd[0])
+//  .setColor(cmd[1])
+//  .setDescription(cmd[2])
+//  .setTimestamp()

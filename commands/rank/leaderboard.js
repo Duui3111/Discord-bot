@@ -7,7 +7,7 @@ module.exports = {
     usage: "leaderboard",
     category: "level stuff",
     run: async (client, message, args) => {
-        let data = client.db.all().filter(i => i.ID.startsWith(`xp_${message.author.id}_${message.guild.id}`)).sort((a, b) => b.data - a.data);
+        let data = client.db.all().filter(i => i.ID.startsWith(`xp_`)).sort((a, b) => b.data - a.data);
         if (data.length < 1) return message.channel.send("No leaderboard");
         let myrank = data.map(m => m.ID).indexOf(`xp_${message.author.id}_${message.guild.id}`) + 1 || "N/A";
         data.length = 10;

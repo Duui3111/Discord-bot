@@ -24,12 +24,23 @@ module.exports  = async (client, message) => {
     let command = client.commands.get(cmd);
     if (!command) command = client.commands.get(client.aliases.get(cmd));
     if (!command) return;
-     if(command) return command.run(client, message, args);
+    if(command) return command.run(client, message, args);
      
     // if (command) {
     //     command.run(client, message, args);
-    //   } else {
-       
+    //   } else  { 
+    //     let cmdx = db.get(`cmd_${message.guild.id}`)
+    //      if(cmdx) {
+    //        let cmdy = cmdx.find(x => x.name === cmd)
+    //        if(cmdy) message.channel.send(cmdy.responce)
+    //      }
     // }
+
+      let cmdx = db.get(`cmd_${message.guild.id}`)
+        if(cmdx) {
+          let cmdy = cmdx.find(x => x.name === cmd)
+          if(cmdy) message.channel.send(cmdy.responce)
+        }
+        console.log(cmdy.responce)
 } 
 

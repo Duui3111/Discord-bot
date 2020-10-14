@@ -1,5 +1,3 @@
-const { Client } = require("discord.js");
-const message = require("../../events/message");
 const { dprefix } = require("../../config.json");
 const db = require('quick.db');
 const { MessageEmbed } = require("discord.js");

@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 const config = require("../../config.json");
 const moment = require("moment");
+const { utc } = require('moment');
+const os = require('os');
+const ms = require('ms');
 
 module.exports = {
     name: "botstats",
@@ -13,7 +16,6 @@ module.exports = {
       let totalGuilds = client.guilds.cache.size;
       let users = client.users.cache.size;
       let channels = client.channels.cache.size
-      let ramUsage = (process.memoryUsage().heapTotal / 1024 / 1024).toFixed(2) + "MB";
       let discord = Discord.version;
       let node = process.versions.node;
 
@@ -38,30 +40,38 @@ module.exports = {
         { name: "Servers", value: totalGuilds, inline: true},
         { name: "Users", value: users, inline: true },
         { name: "Channels", value: channels, inline: true },
-        { name: "RAM usage", value: ramUsage, inline: true },
         { name: "Discord.js", value: discord, inline: true },
         { name: "Node.js", value: node, inline: true },
         { name: "Discord Support", value: "[bot discord](https://discord.gg/EhftPru)", inline: true },
-        { name: "Created at",  value: moment(client.user.createdAt).format(), inline: true },
       )
 
-      return message.channel.send(announcementEmbed)
+      announcementEmbed.addField("Platform", process.platform, true)
+      announcementEmbed.addField("Total Memory", formatSizeUnits(process.memoryUsage().heapTotal), true)
+      announcementEmbed.addField("Used Memory", formatSizeUnits(process.memoryUsage().heapUsed), true)
+      announcementEmbed.addField("Created at", moment(client.user.createdAt).format('lll'), true)
 
-      function convertMS( milliseconds ) {
-          var day, hour, minute, seconds;
-          seconds = Math.floor(milliseconds / 1000);
-          minute = Math.floor(seconds / 60);
-          seconds = seconds % 60;
-          hour = Math.floor(minute / 60);
-          minute = minute % 60;
-          day = Math.floor(hour / 24);
-          hour = hour % 24;
-          return {
-              day: day,
-              hour: hour,
-              minute: minute,
-              seconds: seconds
-          };
-      }
+      return message.channel.send(announcementEmbed)
     },
 };
+
+function convertMS(milliseconds) {
+  var day, hour, minute, seconds;
+  seconds = Math.floor(milliseconds / 1000);
+  minute = Math.floor(seconds / 60);
+  seconds = seconds % 60;
+  hour = Math.floor(minute / 60);
+  minute = minute % 60;
+  day = Math.floor(hour / 24);
+  hour = hour % 24;
+  return { day: day,hour: hour, minute: minute, seconds: seconds };
+}
+
+function formatSizeUnits(bytes){
+  if      (bytes >= 1073741824) { bytes = (bytes / 1073741824).toFixed(2) + " GB"; }
+  else if (bytes >= 1048576)    { bytes = (bytes / 1048576).toFixed(2) + " MB"; }
+  else if (bytes >= 1024)       { bytes = (bytes / 1024).toFixed(2) + " KB"; }
+  else if (bytes > 1)           { bytes = bytes + " bytes"; }
+  else if (bytes == 1)          { bytes = bytes + " byte"; }
+  else                          { bytes = "0 bytes"; }
+  return bytes;
+}

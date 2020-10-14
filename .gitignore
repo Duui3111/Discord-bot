@@ -1,6 +1,9 @@
 #modules
 node_modules/
 
+# more stuff
+package-lock.json
+
 #cnfig files
 config.json
 
