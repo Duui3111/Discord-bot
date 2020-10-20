@@ -27,7 +27,7 @@ module.exports = {
         .addField("aliases", "`" + command.aliases + "`" || "Not Provied")
         .addField("Usage", "`" + command.usage + "`" || "Not Provied")
         .setThumbnail(client.user.displayAvatarURL())
-        .setColor("GREEN")
+        .setColor("RANDOM")
 
       return message.channel.send(embed);
     } else {
@@ -36,10 +36,17 @@ module.exports = {
       let sname = guild != undefined ? guild.name : null
       let emx = new MessageEmbed()
         .setDescription(`Available commands in **${sname}**`)
-        .setColor("GREEN")
+        .setColor("RANDOM")
         .setThumbnail(client.user.displayAvatarURL())
         .setFooter(`You can do ${prefix}help <cmd> to see aditional info!`)
-        .setTimestamp();
+
+        let cmdx = db.get(`cmd_${message.guild.id}`) || "None";
+        let arr = [];
+        for(let obj of cmdx) arr.push(obj.name) || "None";
+        let Custom = "Custom Commands";
+        emx.addField(`${Custom.toLocaleUpperCase()}[${arr.length}]`, `\`${prefix + arr.join("`, `" + prefix)}\``) 
+
+        emx.setTimestamp();
 
       let com = {};
       for (let comm of commands.array()) {
@@ -57,7 +64,8 @@ module.exports = {
 
         let desc = "`"+ prefix + value.join("`, `" + prefix) + "`"; 
   
-        emx.addField(`${category.toUpperCase()}[${value.length}]`, desc)
+        emx.addField(`${category.toUpperCase()}[${value.length}]`, desc);
+
         emx.setTimestamp();
       }
 

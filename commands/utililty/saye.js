@@ -11,11 +11,5 @@ module.exports = {
         .setDescription(args.join(" "))
         .setColor("RANDOM")
 		return message.channel.send(embed);
-     }
- } 
- 
-
-//  .setTitle(cmd[0])
-//  .setColor(cmd[1])
-//  .setDescription(cmd[2])
-//  .setTimestamp()
+    }
+} 

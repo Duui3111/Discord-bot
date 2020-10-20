@@ -10,26 +10,14 @@ module.exports = {
     usage: "<name>",
     run: async (client, message, args) => {
         const name = args.join(" ");
-
-        if (!name) {
-            return message.reply("Maybe it's useful to actually search for someone...!")
-                .then(m => m.delete(5000));
-        }
-
-        const url = `https://instagram.com/${name}/?__a=1`;
-        
+        if (!name) return message.reply("Maybe it's useful to actually search for someone...!")   
         let res; 
-
         try {
-            res = await fetch(url).then(url => url.json());
-        } catch (e) {
-            return message.reply("I couldn't find that account... :(")
-                .then(m => m.delete(5000));
-        }
+            res = await fetch(`https://instagram.com/${name}/?__a=1`).then(url => url.json());
 
-        const account = res.graphql.user;
+            const account = res.graphql.user;
 
-        const embed = new MessageEmbed()
+            const embed = new MessageEmbed()
             .setColor("RANDOM")
             .setTitle(account.full_name)
             .setURL(`https://instagram.com/${name}`)
@@ -42,6 +30,9 @@ module.exports = {
             **- Following:** ${account.edge_follow.count}
             **- Private account:** ${account.is_private ? "Yes 🔐" : "Nope 🔓"}`);
 
-        message.channel.send(embed);
+            message.channel.send(embed);
+        } catch (e) {  
+            message.reply("I couldn't Connect to the instgram api");
+        }
     }
 }

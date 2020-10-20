@@ -4,10 +4,8 @@ module.exports = {
   name: "addcmd",
   usage: "addcmd <cmd_name> <cmd_responce>",
   description: "add guild custom commands",
-  category: "utililty",
+  category: "utililty", 
   run: (client, message, args) => {
-
-
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":x: You need `MANAGE_MESSAGES` perms to use this command")
     let cmdname = args[0]
     if(!cmdname) return message.channel.send(`:x: You have to give command name, \`addcmd <cmd_name> <cmd_responce>\``)
@@ -17,8 +15,8 @@ module.exports = {
     if(database && database.find(x => x.name === cmdname.toLowerCase())) return message.channel.send(":x: This command name is already added in guild custom commands.")
     
     let data = {
-      name: cmdname.toLowerCase(),
-      responce: cmdresponce
+      "name": cmdname.toLowerCase(),
+      "responce": cmdresponce
     }
 
     db.push(`cmd_${message.guild.id}`, data)
