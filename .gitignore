@@ -1,20 +1,8 @@
-#modules
 node_modules/
-
-#cnfig files
+package-lock.json
 config.json
-
-#github stuff
 .git/
-
-#db stuff
 database.sqlite
 json.sqlite
-
-#Work Space
 .vscode 
-
-#testing 
 test/
-Not-A-bot/
-save db/

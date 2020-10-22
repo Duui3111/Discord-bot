@@ -1,6 +1,8 @@
-const { Client, Collection, Message } = require("discord.js");
-const { dprefix, token, youtube_api } = require("./config.json")
+const { Client, Collection } = require("discord.js");
+const { dprefix, token, youtube_api, mongodbUrl } = require("./config.json");
 const client = new Client()
+
+require("./dashboard/dashboard")(client);
 
 const { Player } = require("discord-player"); 
 const player = new Player(client, youtube_api); 
@@ -14,7 +16,7 @@ client.snipes = new Map();
 client.db = require("quick.db");
 
 ["command"].forEach(handler => {
-    require(`./handlers/${handler}`)(client);
+  require(`./handlers/${handler}`)(client);
 });
 
 
@@ -72,29 +74,3 @@ client.on("message", async message => {
 });
 
 client.login(token);
-
-
-// ["event"].forEach(handler => {
-//     require(`./handlers/${handler}`)(client);
-// });
-
-// client.on("message", async (message) => {
-//     message.member; 
-//     message.author; 
-//     require("./events/message")(client, message); 
-// });
-
-// client.on("guildMemberAdd", member => {
-//   const guild = member.guild; 
-//   require("./events/guildMemberAdd")(member, guild); 
-// })
-
-// client.on("guildCreate", guild => {
-//   require("./events/guildCreate")(guild);
-// });
-
-
-// client.snipes = new Map()
-// client.on('messageDelete', function(message, channel){
-//   require("./events/messageDelete")(client, message, channel);
-// })

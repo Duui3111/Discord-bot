@@ -1,0 +1,100 @@
+<%- include("includes/header", { bot, user, path, title: "Commands" }) %>
+
+<div>
+</div>
+
+<div class="container jumbotron pb-0 bg-transparent">
+    <h1 class="display-3">Commands</h1>
+    <hr>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <ul class="list-group categories">
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer active"
+                    onclick="setCategory('economy')"><span>economy</span></li>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer"
+                    onclick="setCategory('fun')"><span>fun</span></li>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer"
+                    onclick="setCategory('info')"><span>info</span></li>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer"
+                    onclick="setCategory('moderation')"><span>moderation</span></li>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer"
+                    onclick="setCategory('music')"><span>music</span></li>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer"
+                    onclick="setCategory('levelstuff')">
+                    <span>level stuff</span></li>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer"
+                    onclick="setCategory('roles')">
+                    <span>roles</span></li>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer"
+                    onclick="setCategory('utililty')"><span>utililty</span></li>
+
+            </ul>
+        </div>
+        <div class="col-sm-9">
+            <ul class="list-group commands">
+                <% for (const command of utililty) { %>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer utililty">
+                    <%- command %></li>
+                <% } %>
+
+                <% for (const command of economy) { %>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer economy">
+                    <%- command %></li>
+                <% } %>
+
+                <% for (const command of music) { %>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer music">
+                    <%- command %></li>
+                <% } %>
+
+                <% for (const command of moderation) { %>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer moderation">
+                    <%- command %></li>
+                <% } %>
+
+                <% for (const command of info) { %>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer info">
+                    <%- command %></li>
+                <% } %>
+
+                <% for (const command of roles) { %>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer roles">
+                    <%- command %></li>
+                <% } %>
+
+                <% for (const command of fun) { %>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer fun">
+                    <%- command %></li>
+                <% } %>
+
+                <% for (const command of levelstuff) { %>
+                <li class="list-group-item my-1 border border-light rounded cursor-pointer levelstuff">
+                    <%- command %></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $('.categories li')[0].classList.add('active');
+
+    $('.categories li').on('click', function () {
+        $('.categories li').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    function setCategory(name) {
+        $('.commands li').attr('hidden', '');
+        $(`.commands .${name}`).removeAttr('hidden');
+    }
+
+    setCategory('economy');
+</script>
+
+<style>
+.cursor-pointer {
+    cursor: pointer;
+}
+</style>

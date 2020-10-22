@@ -1,4 +1,3 @@
-const emotes = require ("../../emojis.json");
 const Discord = require("discord.js");
 
 module.exports = {
@@ -6,8 +5,8 @@ module.exports = {
     aliases: ["p"],
     category: "music",
 run: async (client, message, args) => {
-    if(!message.member.voice.channel) return message.channel.send(`**You're not in a voice channel ${emotes.error}**`);
-    if (!args[0]) return message.channel.send(`**Please enter a music or playlist ${emotes.error}**`); 
+    if(!message.member.voice.channel) return message.channel.send(`You're not in a voice channel`);
+    if (!args[0]) return message.channel.send(`Please enter a music or playlist`); 
     const aSongIsAlreadyPlaying = client.player.isPlaying(message.guild.id);
     if(aSongIsAlreadyPlaying){
         const song = await client.player.addToQueue(message.guild.id, args.join(" "));

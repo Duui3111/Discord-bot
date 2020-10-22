@@ -1,10 +1,9 @@
 {
-  "token": "BOT TOKEN",
-  "youtube_api": "YOUTUBR API KEY",
-  "prefix": "$",
- 
-  "activity": {
-    "status": "$help",
-    "type": "STREAMING"
-  }
+  "token": "",
+  "youtube_api": "",
+  "dprefix": "",
+  "id": "",
+  "clientSecret": "",
+  "domain": "http://localhost",
+  "port": 8080 
 }

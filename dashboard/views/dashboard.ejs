@@ -1,0 +1,16 @@
+<%- include("includes/header", { bot, user, path, title: "Dashboard" }) %>
+
+<div class="card-body">
+  <% user.guilds.forEach(guild => {
+    const permsOnGuild = new perms(guild.permissions);
+    if(!permsOnGuild.has("MANAGE_GUILD")) return; %>
+    <% if (bot.guilds.cache.get(guild.id)) { %>
+      <hr />
+    <% if(guild.icon) { %>
+    <img src="<%= `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=64` %>" style="border-radius: 50%;">
+    <% } %>
+  <span class="card-title" style="font-size: 20px;"><%= guild.name %></span>
+  <a href="/dashboard/<%= guild.id %>" class="btn btn-primary" style=" margin-left: 25px;">Edit Settings</a>
+  <% } %>
+  <% }); %>
+</div>
