@@ -62,6 +62,7 @@ module.exports = {
       for(const [key, value] of Object.entries(com)) {
         let category = key;
 
+        if(category === "dev") continue;
         let desc = "`"+ prefix + value.join("`, `" + prefix) + "`"; 
   
         emx.addField(`${category.toUpperCase()}[${value.length}]`, desc);
