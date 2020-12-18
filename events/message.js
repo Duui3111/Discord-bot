@@ -17,6 +17,7 @@ module.exports  = async (client, message) => {
   let lvl = client.db.get(`level_${message.author.id}_${message.guild.id}`) || client.db.set(`level_${message.author.id}_${message.guild.id}`,1);;
   if (level > lvl) {
     let newLevel = client.db.set(`level_${message.author.id}_${message.guild.id}`,level);
+    if(db.get(`dirank_${message.guild.id}`) === true) return; else
     message.channel.send(`:tada: ${message.author.toString()}, You just advanced to level ${newLevel}!`);
   }
 
